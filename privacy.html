@@ -35,6 +35,9 @@
     border-radius: 4px;
     font-size: .9em;
   }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
+  th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid #e2e2e2; vertical-align: top; }
+  th { font-weight: 600; }
   footer {
     margin-top: 3rem;
     padding-top: 1.2rem;
@@ -48,6 +51,7 @@
     .callout { background: #172113; border-left-color: #6bbf5c; }
     a { color: #8cd44f; }
     code { background: #1e2519; }
+    th, td { border-bottom-color: #2a3324; }
     footer { border-top-color: #2a3324; }
   }
 </style>
@@ -56,129 +60,145 @@
 <main>
 
 <h1>TerraFill — Privacy Policy</h1>
-<p class="meta">Effective 26 August 2026 · Applies to the TerraFill Android app (<code>com.yanidv.terrafill</code>)</p>
+<p class="meta">Effective 1 September 2026 · Applies to the TerraFill Android app (<code>com.yanidv.terrafill</code>)</p>
 
 <div class="callout">
-  <strong>In short:</strong> TerraFill has no user accounts and never asks you for personal
-  details. Your game progress is saved on your own device. The game shows optional rewarded
-  video ads, and collects anonymous statistics about how it is played so it can be improved.
-  Nothing collected identifies you personally, and nothing is ever sold.
+  <strong>In short:</strong> TerraFill has no accounts and asks you for nothing — no name,
+  no email, no phone number. It does show ads and it does measure how the game is used,
+  and to do those two things it sends a device identifier, a rough idea of which country
+  you are in, and a record of in-game events to Google. Your game progress itself stays
+  on your device. There is no TerraFill server anywhere.
 </div>
 
-<h2>Data we collect</h2>
+<h2>What is collected, and why</h2>
 <p>
-  TerraFill has no sign-up and no login, and never asks for your name, email address or any
-  other personal detail. The information described below is collected automatically by two
-  Google services built into the app, and is used only in aggregate — as statistics about
-  players in general, never to identify or contact anyone.
+  TerraFill includes three Google services: Google AdMob, which shows the ads that pay for
+  the game; Google Analytics for Firebase, which measures how the game is used so it can be
+  improved; and Firebase Cloud Messaging, which allows a message to be sent to players.
+  Through them, the following is collected and shared with Google:
+</p>
+<table>
+  <tr><th>What</th><th>Why</th></tr>
+  <tr>
+    <td><strong>Device and advertising identifiers</strong><br>Your Android advertising ID, an app instance ID, and a notification token</td>
+    <td>Selecting and measuring ads, measuring app usage, and delivering notifications</td>
+  </tr>
+  <tr>
+    <td><strong>Approximate location</strong><br>Roughly which country or region you are in, derived from your IP address</td>
+    <td>Selecting ads and understanding where players are. <strong>Your precise location is never requested or used</strong> — the app holds no location permission and never reads GPS.</td>
+  </tr>
+  <tr>
+    <td><strong>In-app activity</strong><br>Which screens you open, which levels you start and finish, and whether an ad loaded or was watched</td>
+    <td>Understanding how the game is played, and diagnosing problems such as ads failing to load</td>
+  </tr>
+  <tr>
+    <td><strong>Basic device information</strong><br>Device model, operating system version, app version, language</td>
+    <td>Diagnosing crashes and problems that affect only some devices</td>
+  </tr>
+</table>
+<p>
+  None of this is used to identify you personally, and none of it is sold. What is collected
+  is handled under
+  <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>; see also
+  <a href="https://support.google.com/admob/answer/9012903">how Google uses data from apps that use its advertising services</a>.
+</p>
+
+<h2>What is <em>not</em> collected</h2>
+<ul>
+  <li>Your name, email address, phone number or postal address</li>
+  <li>Precise or GPS location</li>
+  <li>Contacts, calendar, photos, videos, audio, files, or messages</li>
+  <li>Payment or financial information — the game has no purchases</li>
+  <li>Health data, or any special category of personal data</li>
+  <li>Anything from other apps on your device</li>
+</ul>
+
+<h2>Permissions the app requests</h2>
+<ul>
+  <li><code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> — to load ads and send the measurements above</li>
+  <li><code>AD_ID</code> — to read the advertising identifier Android gives apps for ads</li>
+  <li><code>POST_NOTIFICATIONS</code> — asked for only after you have finished a level, and only if you agree. Declining costs you nothing in the game.</li>
+</ul>
+
+<h2>Notifications</h2>
+<p>
+  If you allow notifications, TerraFill may remind you that your daily streak is about to
+  run out. That reminder is generated on your device by the app itself; deciding to send it
+  involves no server and no data leaving your phone.
+</p>
+<p>
+  The app can also receive an occasional message from the developer — for example, that new
+  levels are available. Notifications are sent at most once every two days, never between
+  10pm and 9am in your local time, and stop entirely if three go unanswered. You can turn
+  them off at any time in your device's settings, and the game works exactly the same
+  without them.
+</p>
+
+<h2>Advertising and your choices</h2>
+<p>
+  Ads are optional inside the game: you are never required to watch one, and the levels can
+  all be completed without doing so.
+</p>
+<p>
+  If you are in the European Economic Area, the United Kingdom or Switzerland, you will be
+  shown a consent form the first time the app runs, asking whether ads may be personalised.
+  You can change that answer at any time from <strong>Options → Privacy options</strong> in
+  the game.
+</p>
+<p>
+  Wherever you are, Android lets you limit ad tracking or delete your advertising ID
+  entirely, from <strong>Settings → Google → Ads</strong> on your device.
 </p>
 
 <h2>Data stored on your device</h2>
-<p>The game saves your progress locally so you can pick up where you left off. This includes:</p>
+<p>Your progress is saved locally, and is not sent anywhere:</p>
 <ul>
   <li>Which levels you have unlocked, and your best score and star rating for each</li>
   <li>Stars you have earned and spent</li>
   <li>Skins you own and the one you have equipped</li>
   <li>An interrupted game, so it can be resumed</li>
+  <li>Your daily mission and streak progress</li>
   <li>Your sound on/off preference</li>
 </ul>
-<p>
-  This information stays on your device. It is not uploaded to any server, and it contains
-  nothing that identifies you.
-</p>
 
 <h2>Android backup</h2>
 <p>
-  If you have Android's system backup switched on, your device may copy the game's
-  save data to <em>your own</em> Google account, in the same way it backs up your other
-  apps. That copy belongs to you and is governed by
-  <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. The
-  developer of TerraFill has no access to it. You can turn this off in your device's
-  system settings.
-</p>
-
-<h2>Advertising and analytics</h2>
-<p>
-  TerraFill uses two Google services: <strong>Google AdMob</strong> to show optional
-  rewarded video ads, and <strong>Google Analytics for Firebase</strong> to understand how
-  the game is played. Both are operated by Google and are also governed by
-  <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.
-</p>
-<p>
-  <strong>Rewarded ads.</strong> Ads are never forced on you. They appear only when you
-  choose to watch one — to earn stars, or to skip an optional waiting period. To serve and
-  measure these ads, the Google Mobile Ads SDK reads your device's
-  <strong>advertising ID</strong>, a resettable identifier that is not tied to your name.
-  You can reset it, or opt out of personalised ads entirely, at any time in your device
-  settings under <em>Settings &rarr; Privacy &rarr; Ads</em>.
-</p>
-<p>
-  <strong>Analytics.</strong> The game reports anonymous usage events so the developer can
-  see which levels are too hard, where players stop playing, and whether new features
-  actually work. These are: which screen is open, which level was started, whether an
-  attempt was won or lost, how much territory was claimed, and whether an optional ad was
-  watched. Alongside these events, the Firebase SDK collects a randomly generated
-  app-instance identifier, your device model, operating-system version, language, app
-  version, and an approximate region derived from your IP address. The IP address itself is
-  discarded by Google and is never stored by, or visible to, the developer.
-</p>
-<p>
-  <strong>What is never collected.</strong> TerraFill does not collect your name, email
-  address, phone number, contacts, photos, precise GPS location, or any text you type.
-  There are no user accounts, and the developer cannot identify an individual player from
-  this data. None of it is sold, and none of it is shared with anyone other than the Google
-  services named above.
-</p>
-
-<h2>Your choices and consent</h2>
-<p>
-  If you are in the European Economic Area, the United Kingdom or Switzerland, TerraFill
-  asks for your consent the first time you open the game, using Google's standard privacy
-  form, and nothing advertising-related is collected until you have answered. If you
-  decline, the game remains fully playable — you simply will not be offered ads, and the
-  analytics described above are switched off for you. You can change your answer at any
-  time from <strong>Options &rarr; Privacy Settings</strong> inside the game.
-</p>
-<p>
-  Wherever you are, you can limit ad tracking through your device's own
-  <em>Settings &rarr; Privacy &rarr; Ads</em> controls, independently of anything in the
-  game.
-</p>
-
-<h2>Crash reporting</h2>
-<p>
-  If the app stops unexpectedly, Android's own system sends the technical details of the
-  fault — such as the error and the device model — to Google Play, so the developer can find
-  and fix it. These reports contain no personal information.
+  If you have Android's system backup switched on, your device may copy the game's save data
+  to <em>your own</em> Google account, in the same way it backs up your other apps. That copy
+  belongs to you and is governed by
+  <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. The developer of
+  TerraFill has no access to it. You can turn this off in your device's system settings.
 </p>
 
 <h2>Children</h2>
 <p>
-  TerraFill is intended for a general audience and is not directed at children. Because the
-  game shows advertising and collects the usage statistics described above, it is not
-  designed for use by children under the age of digital consent in their country without a
-  parent's involvement. No personal information is knowingly collected from children, and
-  the app never asks any player for personal details.
+  TerraFill is not directed at children under 13, and no account or personal information is
+  ever requested. Because the game shows ads and measures usage, it is intended for a general
+  audience rather than for children. If you believe a child has used the app and you want the
+  associated advertising identifier reset, you can do so from your device's settings as
+  described above, or contact us.
 </p>
 
 <h2>Deleting your data</h2>
-<p>There is no account to delete. To erase everything the game remembers on your device:</p>
+<p>There is no account to delete and no TerraFill server holding anything. To erase what the game remembers:</p>
 <ul>
   <li>Open the game, go to <strong>Options</strong> and choose <strong>Reset progress</strong>, or</li>
   <li>Uninstall the app, which removes all of its local data</li>
 </ul>
 <p>
-  If you also want to remove the system backup copy described above, clear it from your
-  Google account's backup settings. To have the anonymous analytics data associated with
-  your device deleted, or to ask any question about your data, contact the developer at the
-  address below and it will be actioned.
+  Data already collected by Google's advertising and analytics services is held by Google
+  rather than by us, and is governed by their retention policies. You can reset or delete
+  your advertising identifier from <strong>Settings → Google → Ads</strong>, which
+  disconnects future collection from past collection. If you also want to remove the system
+  backup copy described above, clear it from your Google account's backup settings. For any
+  other request, write to the address below.
 </p>
 
 <h2>Changes to this policy</h2>
 <p>
-  If this policy changes, the revised version will be published at this same address with
-  a new effective date at the top. Material changes will be reflected on the app's Google
-  Play listing as well.
+  If this policy changes, the revised version will be published at this same address with a
+  new effective date at the top, and the Data Safety section on the app's Google Play listing
+  will be updated to match.
 </p>
 
 <h2>Contact</h2>
